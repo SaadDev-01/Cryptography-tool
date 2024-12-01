@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cipher Encryption/Decryption</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        
+        <h1>🔒 Cipher Encryption/Decryption Tool</h1>
+        
+        <div class="form-group">
+            <label for="action">Choose Action:</label>
+            <select id="action">
+                <option value="encrypt">Encrypt</option>
+                <option value="decrypt">Decrypt</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="algorithm">Choose Algorithm:</label>
+            <select id="algorithm" onchange="toggleKeyInput()">
+                <option value="caesar">Caesar Cipher</option>
+                <option value="monoalphabetic">Monoalphabetic Cipher</option>
+                <option value="vigenere">Vigenère Cipher</option>
+                <option value="playfair">Playfair Cipher</option>
+                <option value="substitution">Substitution Cipher</option>
+                <option value="transposition">Transposition Cipher</option>
+                <option value="rail">Rail Fence Cipher</option>
+                <option value="affine">Affine Cipher</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="text">Enter Text:</label>
+            <textarea id="text" rows="4" placeholder="Type your text here..."></textarea>
+        </div>
+
+        <div class="form-group" id="key-group">
+            <label for="key">Enter Key:</label>
+            <input type="text" id="key" placeholder="Type key here...">
+        </div>
+
+        <div class="form-group">
+            <button onclick="processText()">Process</button>
+        </div>
+
+        <div class="form-group">
+            <label for="output">Result:</label>
+            <textarea id="output" rows="4" readonly></textarea>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
